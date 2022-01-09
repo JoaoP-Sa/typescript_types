@@ -13,10 +13,23 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string){
   }
 }
 
-const number1 = 5;
+//let number1: number = 5;
+
+let number1: number;
+number1 = 5;          //poderíamos declarar a variável e dizer que ela é do tipo número enquanto já atribuímos
+                      //um valor a ela igual fizemos na linha 16, porém é mais recomendado por boa prática
+                      //fazermos igual foi feito nas linhas 18 e 19
+
 const number2 = 2.8;
 const printResult = true;
-const resultPhrase = 'The result is: ';
+
+let resultPhrase = 'The result is: ';
+//resultPhrase = 0;
+resultPhrase = 'another result is: ';                     
+                                        //se iniciarmos uma variável com um tipo e depois mudarmos o tipo dela
+                      //igual fizemos nas linhas 26 e 27 o typescript nos retornará um erro, pois no typescript
+                      //as variáveis devem possuir um tipo bem definido, no entanto se declararmos um outro valor
+                      //do mesmo tipo na variável, como fizemos na linha 28, o typescript irá aceitar
 
 add(number1, number2, printResult, resultPhrase);
 
